@@ -1,14 +1,22 @@
 package br.com.oportuna.apontamentosb.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import br.com.oportuna.apontamentosb.models.Apontamento;
+import br.com.oportuna.apontamentosb.repository.ApontamentoRepository;
+
 @Controller 
 @RequestMapping("/apontamento")
 public class ApontamentoController {
 
+	@Autowired
+	private ApontamentoRepository repository;
+	
+	
 	@RequestMapping("/form")
 	public ModelAndView form() {
 		
@@ -16,7 +24,7 @@ public class ApontamentoController {
 	}
 	
 	@RequestMapping(method=RequestMethod.POST)
-	public ModelAndView gravar() {
+	public ModelAndView gravar(Apontamento apontamento) {
 		
 		return new ModelAndView("redirect:/apontamento");
 	}

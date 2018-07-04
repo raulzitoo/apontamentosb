@@ -17,10 +17,6 @@
 			<input type="text" class="form-group">
 		</div>
 		
-		<div class="container">
-			<label>Cliente</label>
-			<input type="text" class="form-group">
-		</div>
 		
 		<div class="container">
 			<label>Horas</label>
