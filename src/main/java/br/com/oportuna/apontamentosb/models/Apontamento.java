@@ -6,8 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 public class Apontamento {
@@ -16,7 +16,7 @@ public class Apontamento {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
-	@Temporal(TemporalType.DATE)
+	@DateTimeFormat(pattern="dd/mm/yyyy")
 	private Calendar data;
 	private double hora;
 	private String descricao;
@@ -45,6 +45,11 @@ public class Apontamento {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
+	@Override
+	public String toString() {
+		return "Apontamento [id=" + id + ", data=" + data + ", hora=" + hora + ", descricao=" + descricao + "]";
+	}
+	
 	
 	
 	

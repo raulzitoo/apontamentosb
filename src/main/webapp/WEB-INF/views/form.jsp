@@ -14,18 +14,18 @@
 	
 		<div class="container">
 			<label>Data</label>
-			<input type="text" class="form-group">
+			<input type="text" name="data" class="form-group">
 		</div>
 		
 		
 		<div class="container">
 			<label>Horas</label>
-			<input type="text" class="form-group">
+			<input type="text" name="hora" class="form-group">
 		</div>
 		
 		<div class="container">
 			<label>Descrição</label>
-			<input type="text" class="form-group">
+			<input type="text" name="descricao"  class="form-group">
 		</div>
 		
 		<button type="submit" class="btn-primary">Salvar</button>

@@ -26,6 +26,10 @@ public class ApontamentoController {
 	@RequestMapping(method=RequestMethod.POST)
 	public ModelAndView gravar(Apontamento apontamento) {
 		
+		System.out.println(apontamento);
+		
+		repository.save(apontamento);
+		
 		return new ModelAndView("redirect:/apontamento");
 	}
 	

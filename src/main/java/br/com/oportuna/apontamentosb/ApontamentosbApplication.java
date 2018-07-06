@@ -2,12 +2,8 @@ package br.com.oportuna.apontamentosb;
 
 
 
-import javax.sql.DataSource;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 @SpringBootApplication
 public class ApontamentosbApplication {
@@ -16,7 +12,7 @@ public class ApontamentosbApplication {
 		SpringApplication.run(ApontamentosbApplication.class, args);
 	}
 	
-	@Bean
+	/*@Bean
 	public DataSource dataSouce() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
@@ -25,5 +21,5 @@ public class ApontamentosbApplication {
 		dataSource.setPassword("");
 		
 		return dataSource;
-	}
+	}*/
 }
